@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>LOGIN</title>
+    </head>
+    <body>
+     <form method="POST">
+     {% csrf_token %}
+     <label>Username:</label>
+     {{form.username}}
+     <br>
+     <br>
+     <label>Email:</label>
+     {{form.email}}
+     <br>
+     <br>
+     <label>Password:</label>
+     {{form.password1}}
+     <br>
+     <br>
+     <label>Confirm Password:</label>
+     {{form.password2}}
+     <br>
+     <br>
+      <input type="submit" value="Register">
+     </form>
+     <h4>Already have an account <a href="{% url 'login' %}">sign in</a></h4>
+     
+    </body>
+</html>

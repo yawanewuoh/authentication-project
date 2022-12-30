@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>AUTH</title>
+    </head>
+    <body>
+        <a href="{% url 'logout' %}">Logout</a>
+        {% if request.user.is_authenticated %}
+        <h3><i>Hello {{request.user}}</i></h3>
+        <h2>You are welcome to My Authentication</h2>
+        {% else %}
+        <h2>You are welcome to My Authentication</h2>
+        {% endif %}
+    </body>
+</htmL>

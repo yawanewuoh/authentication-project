@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>LOGIN</title>
+    </head>
+    <body>
+     <form method="POST">
+     {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value="Login">
+     </form>
+     <h4>Create an account for free <a href="{% url 'register' %}">sign up</a></h4>
+     <h4><a href="{% url 'password-reset' %}">Forgotten Password? </a></h4>
+    </body>
+</html>
